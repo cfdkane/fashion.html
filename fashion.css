@@ -1,0 +1,31 @@
+/* Contenu pour styles.css */
+
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3');
+    background-size: cover;
+    background-position: center;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-overlay {
+    transition: all 0.3s ease;
+}
+
+.collection-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Vous pouvez supprimer cette classe et l'animation si vous ne l'utilisez pas activement */
+.marquee {
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
