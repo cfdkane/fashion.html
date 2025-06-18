@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamafashion | Haute Couture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        .product-overlay {
+            transition: all 0.3s ease;
+        }
+        .collection-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+        }
+        .marquee {
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Top Bar -->
+    <div class="bg-black text-white text-xs py-2 px-4 flex justify-between items-center">
+        <div class="flex space-x-4">
+            <a href="#" class="hover:text-gray-300">FR</a>
+            <a href="#" class="hover:text-gray-300">EN</a>
+        </div>
+        <div class="flex space-x-6">
+            <a href="#" class="hover:text-gray-300"><i class="fas fa-user mr-1"></i> Mon Compte</a>
+            <a href="#" class="hover:text-gray-300"><i class="fas fa-heart mr-1"></i> Favoris</a>
+            <a href="#" class="hover:text-gray-300"><i class="fas fa-shopping-bag mr-1"></i> Panier (0)</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-serif tracking-widest">KAMAFASHION</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#" class="text-gray-900 hover:text-gray-600 px-1 py-2 text-sm font-medium">Nouveautés</a>
+                        <a href="#" class="text-gray-900 hover:text-gray-600 px-1 py-2 text-sm font-medium">Vêtements</a>
+                        <a href="#" class="text-gray-900 hover:text-gray-600 px-1 py-2 text-sm font-medium">Chaussures</a>
+                        <a href="#" class="text-gray-900 hover:text-gray-600 px-1 py-2 text-sm font-medium">Montres</a>
+                        <a href="#" class="text-gray-900 hover:text-gray-600 px-1 py-2 text-sm font-medium">Bijoux</a>
+                        <a href="#" class="text-gray-900 hover:text-gray-600 px-1 py-2 text-sm font-medium">Maroquinerie</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-bg h-screen flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-serif mb-6">COLLECTION PRINTEMPS 2025</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Découvrez notre nouvelle collection inspirée par l'art et l'élégance intemporelle</p>
+            <button class="bg-transparent border border-white px-8 py-3 hover:bg-white hover:text-black transition duration-300">EXPLORER</button>
+        </div>
+    </div>
+
+    <!-- Featured Categories -->
+    <div class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-serif text-center mb-12">CATÉGORIES PHARES</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <a href="#" class="group relative overflow-hidden h-64">
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3" alt="Vêtements" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <span class="text-white text-xl font-medium">VÊTEMENTS</span>
+                </div>
+            </a>
+            <a href="#" class="group relative overflow-hidden h-64">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3" alt="Chaussures" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <span class="text-white text-xl font-medium">CHAUSSURES</span>
+                </div>
+            </a>
+            <a href="#" class="group relative overflow-hidden h-64">
+                <img src="https://images.unsplash.com/photo-1523170335258-f5ed118494a8?ixlib=rb-4.0.3" alt="Montres" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <span class="text-white text-xl font-medium">MONTRES</span>
+                </div>
+            </a>
+            <a href="#" class="group relative overflow-hidden h-64">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3" alt="Bijoux" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <span class="text-white text-xl font-medium">BIJOUX</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- New Arrivals -->
+    <div class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif text-center mb-12">NOUVELLES ARRIVAGES</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white product-card overflow-hidden group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3" alt="Manteau en cuir" class="w-full h-80 object-cover">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex flex-col items-center justify-center space-y-4">
+                            <button class="bg-white text-black px-6 py-2 hover:bg-gray-200">Voir détails</button>
+                            <button class="bg-transparent border border-white text-white px-6 py-2 hover:bg-white hover:text-black">Ajouter au panier</button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1">NOUVEAU</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium">Manteau en cuir verni</h3>
+                        <p class="text-gray-500 text-sm">Vêtements</p>
+                        <p class="font-bold mt-2">10000FCFA</p>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white product-card overflow-hidden group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3" alt="Montre en or" class="w-full h-80 object-cover">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex flex-col items-center justify-center space-y-4">
+                            <button class="bg-white text-black px-6 py-2 hover:bg-gray-200">Voir détails</button>
+                            <button class="bg-transparent border border-white text-white px-6 py-2 hover:bg-white hover:text-black">Ajouter au panier</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium">Montre en or 18 carats</h3>
+                        <p class="text-gray-500 text-sm">Montres</p>
+                        <p class="font-bold mt-2">150000FCFA</p>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white product-card overflow-hidden group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1604671801908-6f0c6a092c05?ixlib=rb-4.0.3" alt="Sac à main" class="w-full h-80 object-cover">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex flex-col items-center justify-center space-y-4">
+                            <button class="bg-white text-black px-6 py-2 hover:bg-gray-200">Voir détails</button>
+                            <button class="bg-transparent border border-white text-white px-6 py-2 hover:bg-white hover:text-black">Ajouter au panier</button>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1">LIMITÉ</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium">Sac à main signature</h3>
+                        <p class="text-gray-500 text-sm">Maroquinerie</p>
+                        <p class="font-bold mt-2">20000FCFA</p>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-white product-card overflow-hidden group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611591437281-460914d1551c?ixlib=rb-4.0.3" alt="Bracelet diamant" class="w-full h-80 object-cover">
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 opacity-0 flex flex-col items-center justify-center space-y-4">
+                            <button class="bg-white text-black px-6 py-2 hover:bg-gray-200">Voir détails</button>
+                            <button class="bg-transparent border border-white text-white px-6 py-2 hover:bg-white hover:text-black">Ajouter au panier</button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium">Bracelet diamant</h3>
+                        <p class="text-gray-500 text-sm">Bijoux</p>
+                        <p class="font-bold mt-2">50000FCFA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button class="border border-black px-8 py-3 hover:bg-black hover:text-white transition duration-300">VOIR TOUT</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brand Story -->
+    <div class="collection-bg py-24 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h2 class="text-4xl font-serif mb-6">NOTRE HISTOIRE</h2>
+                <p class="text-lg mb-8">Fondée en 2020, Kamafashion incarne l'excellence artisanale et l'innovation dans le monde de la mode. Chaque pièce est conçue avec une attention méticuleuse aux détails, combinant savoir-faire traditionnel et design contemporain.</p>
+                <button class="bg-transparent border border-white px-8 py-3 hover:bg-white hover:text-black transition duration-300">EN SAVOIR PLUS</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Collection -->
+    <div class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-serif text-center mb-12">COLLECTION ICÔNE</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="relative overflow-hidden h-96 group">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616ac5c5?ixlib=rb-4.0.3" alt="Collection Icone" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                    <div class="text-center p-8">
+                        <h3 class="text-2xl font-serif mb-4">LA COLLECTION MONOGRAM</h3>
+                        <p class="mb-6">Un hommage à notre héritage africaine avec une touche moderne</p>
+                        <button class="border border-white px-6 py-2 hover:bg-white hover:text-black transition duration-300">DÉCOUVRIR</button>
+                    </div>
+                </div>
+            </div>
+            <div class="relative overflow-hidden h-96 group">
+                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3" alt="Collection Voyage" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                    <div class="text-center p-8">
+                        <h3 class="text-2xl font-serif mb-4">COLLECTION VOYAGE</h3>
+                        <p class="mb-6">Élégance intemporelle pour les voyageurs du monde</p>
+                        <button class="border border-white px-6 py-2 hover:bg-white hover:text-black transition duration-300">EXPLORER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-serif mb-6">ABONNEZ-VOUS À NOTRE NEWSLETTER</h2>
+                <p class="max-w-2xl mx-auto mb-8">Recevez en exclusivité les dernières collections, invitations aux événements et offres spéciales.</p>
+                <div class="max-w-md mx-auto flex">
+                    <input type="email" placeholder="Votre adresse email" class="flex-grow px-4 py-3 text-black focus:outline-none">
+                    <button class="bg-white text-black px-6 py-3 hover:bg-gray-200 transition duration-300">S'ABONNER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif mb-4">KAMAFASHION</h3>
+                    <p class="text-gray-400 text-sm">L'excellence dans chaque détail depuis 2020.</p>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">BOUTIQUE</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Nouveautés</a></li>
+                        <li><a href="#" class="hover:text-white">Vêtements</a></li>
+                        <li><a href="#" class="hover:text-white">Chaussures</a></li>
+                        <li><a href="#" class="hover:text-white">Montres</a></li>
+                        <li><a href="#" class="hover:text-white">Bijoux</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">INFORMATIONS</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Notre histoire</a></li>
+                        <li><a href="#" class="hover:text-white">Boutiques</a></li>
+                        <li><a href="#" class="hover:text-white">Services</a></li>
+                        <li><a href="#" class="hover:text-white">Carrières</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">CONTACT</h4>
+                    <address class="text-gray-400 not-italic">
+                        101 Avenue Lycée Tivaoune peul<br>
+                        1226 Tivaoune peul, Dakar<br>
+                        +775771739<br>
+                        contact@Kamafashion.com
+                    </address>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 LuxeMode. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Conditions générales</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple product hover effect
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.querySelector('img').style.transform = 'scale(1.05)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('img').style.transform = 'scale(1)';
+            });
+        });
+
+        // Mobile menu toggle (would need more implementation)
+        document.querySelector('nav button').addEventListener('click', () => {
+            alert('Mobile menu would open here');
+        });
+    </script>
+</body>
+</html>
